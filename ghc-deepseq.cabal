@@ -1,0 +1,25 @@
+name:                ghc-deepseq
+version:             0.1.0.0
+synopsis:            Typeclassless deepseq
+description:         This library provides a 'deepseq' function that works
+                     without a typeclass, by inspecting the actual heap
+                     contents.
+license:             BSD3
+license-file:        LICENSE
+author:              Joachim Breitner
+maintainer:          Joachim Breitner <mail@joachim-breitner.de>
+copyright:           2013 Joachim Breitner
+category:            Control
+build-type:          Simple
+cabal-version:       >=1.8
+
+library
+  exposed-modules:
+    GHC.DeepSeq 
+  build-depends:
+    base == 4.5.* || == 4.6.*,
+    ghc-heap-view == 0.5.*
+  Hs-source-dirs:
+    src/
+  Ghc-options:
+    -Wall
